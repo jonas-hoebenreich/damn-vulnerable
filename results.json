@@ -119,10 +119,7 @@
                 "level": "error"
               },
               "properties": {
-                "tags": [
-                  "security",
-                  "external/cwe/cwe-352"
-                ],
+                "tags": ["security", "external/cwe/cwe-352"],
                 "description": "Using cookies without CSRF protection may allow malicious websites to\n              submit requests on behalf of the user.",
                 "id": "js/missing-token-validation",
                 "kind": "problem",
@@ -146,10 +143,7 @@
                 "level": "error"
               },
               "properties": {
-                "tags": [
-                  "security",
-                  "external/cwe/cwe-643"
-                ],
+                "tags": ["security", "external/cwe/cwe-643"],
                 "description": "Building an XPath expression from user-controlled sources is vulnerable to insertion of\n              malicious code by the user.",
                 "id": "js/xpath-injection",
                 "kind": "path-problem",
@@ -201,10 +195,7 @@
                 "level": "warning"
               },
               "properties": {
-                "tags": [
-                  "security",
-                  "external/cwe/cwe-327"
-                ],
+                "tags": ["security", "external/cwe/cwe-327"],
                 "description": "Some mathematical operations on random numbers can cause bias in\n              the results and compromise security.",
                 "id": "js/biased-cryptographic-random",
                 "kind": "problem",
@@ -510,10 +501,7 @@
                 "level": "warning"
               },
               "properties": {
-                "tags": [
-                  "security",
-                  "external/cwe/cwe-400"
-                ],
+                "tags": ["security", "external/cwe/cwe-400"],
                 "description": "Processing user-controlled object hierarchies inefficiently can lead to denial of service.",
                 "id": "js/resource-exhaustion-from-deep-object-traversal",
                 "kind": "path-problem",
@@ -565,10 +553,7 @@
                 "level": "warning"
               },
               "properties": {
-                "tags": [
-                  "security",
-                  "external/cwe/cwe-754"
-                ],
+                "tags": ["security", "external/cwe/cwe-754"],
                 "description": "Calling a method with a user-controlled name may dispatch to\n              an unexpected target, which could cause an exception.",
                 "id": "js/unvalidated-dynamic-method-call",
                 "kind": "path-problem",
@@ -592,10 +577,7 @@
                 "level": "warning"
               },
               "properties": {
-                "tags": [
-                  "security",
-                  "external/cwe/cwe-1004"
-                ],
+                "tags": ["security", "external/cwe/cwe-1004"],
                 "description": "Sensitive cookies set by a server can be read by the client if the `httpOnly` flag is not set.",
                 "id": "js/client-exposed-cookie",
                 "kind": "problem",
@@ -647,10 +629,7 @@
                 "level": "warning"
               },
               "properties": {
-                "tags": [
-                  "security",
-                  "external/cwe/cwe-502"
-                ],
+                "tags": ["security", "external/cwe/cwe-502"],
                 "description": "Deserializing user-controlled data may allow attackers to\n              execute arbitrary code.",
                 "id": "js/unsafe-deserialization",
                 "kind": "path-problem",
@@ -702,10 +681,7 @@
                 "level": "error"
               },
               "properties": {
-                "tags": [
-                  "security",
-                  "external/cwe/cwe-094"
-                ],
+                "tags": ["security", "external/cwe/cwe-094"],
                 "description": "Invoking user-controlled methods on certain objects can lead to remote code execution.",
                 "id": "js/unsafe-dynamic-method-access",
                 "kind": "path-problem",
@@ -816,10 +792,7 @@
                 "level": "error"
               },
               "properties": {
-                "tags": [
-                  "security",
-                  "external/cwe/cwe-843"
-                ],
+                "tags": ["security", "external/cwe/cwe-843"],
                 "description": "Sanitizing an HTTP request parameter may be ineffective if the user controls its type.",
                 "id": "js/type-confusion-through-parameter-tampering",
                 "kind": "path-problem",
@@ -1133,10 +1106,7 @@
                 "level": "warning"
               },
               "properties": {
-                "tags": [
-                  "security",
-                  "external/cwe/cwe-338"
-                ],
+                "tags": ["security", "external/cwe/cwe-338"],
                 "description": "Using a cryptographically weak pseudo-random number generator to generate a\n              security-sensitive value may allow an attacker to predict what value will\n              be generated.",
                 "id": "js/insecure-randomness",
                 "kind": "path-problem",
@@ -1253,10 +1223,7 @@
                 "level": "warning"
               },
               "properties": {
-                "tags": [
-                  "security",
-                  "external/cwe/cwe-134"
-                ],
+                "tags": ["security", "external/cwe/cwe-134"],
                 "description": "Using external input in format strings can lead to garbled output.",
                 "id": "js/tainted-format-string",
                 "kind": "path-problem",
@@ -1280,10 +1247,7 @@
                 "level": "error"
               },
               "properties": {
-                "tags": [
-                  "security",
-                  "external/cwe/cwe-829"
-                ],
+                "tags": ["security", "external/cwe/cwe-829"],
                 "description": "Downloading executables and other sensitive files over an insecure connection\n              opens up for potential man-in-the-middle attacks.",
                 "id": "js/insecure-download",
                 "kind": "path-problem",
@@ -1307,10 +1271,7 @@
                 "level": "warning"
               },
               "properties": {
-                "tags": [
-                  "security",
-                  "external/cwe/cwe-326"
-                ],
+                "tags": ["security", "external/cwe/cwe-326"],
                 "description": "Using a weak cryptographic key can allow an attacker to compromise security.",
                 "id": "js/insufficient-key-size",
                 "kind": "problem",
@@ -1334,10 +1295,7 @@
                 "level": "warning"
               },
               "properties": {
-                "tags": [
-                  "security",
-                  "external/cwe/cwe-916"
-                ],
+                "tags": ["security", "external/cwe/cwe-916"],
                 "description": "Creating a hash of a password with low computational effort makes the hash vulnerable to password cracking attacks.",
                 "id": "js/insufficient-password-hash",
                 "kind": "path-problem",
@@ -1392,10 +1350,7 @@
                 "level": "error"
               },
               "properties": {
-                "tags": [
-                  "security",
-                  "external/cwe/cwe-022"
-                ],
+                "tags": ["security", "external/cwe/cwe-022"],
                 "description": "Extracting files from a malicious zip archive without validating that the\n              destination file path is within the destination directory can cause files outside\n              the destination directory to be overwritten.",
                 "id": "js/zipslip",
                 "kind": "path-problem",
@@ -1419,11 +1374,7 @@
                 "level": "error"
               },
               "properties": {
-                "tags": [
-                  "security",
-                  "correctness",
-                  "external/cwe/cwe-020"
-                ],
+                "tags": ["security", "correctness", "external/cwe/cwe-020"],
                 "description": "Using indexOf to implement endsWith functionality is error-prone if the -1 case is not explicitly handled.",
                 "id": "js/incorrect-suffix-check",
                 "kind": "problem",
@@ -1447,11 +1398,7 @@
                 "level": "error"
               },
               "properties": {
-                "tags": [
-                  "correctness",
-                  "security",
-                  "external/cwe/cwe-020"
-                ],
+                "tags": ["correctness", "security", "external/cwe/cwe-020"],
                 "description": "Prepending a backslash to an ordinary character in a string\n              does not have any effect, and may make regular expressions constructed from this string\n              behave unexpectedly.",
                 "id": "js/useless-regexp-character-escape",
                 "kind": "problem",
@@ -1475,11 +1422,7 @@
                 "level": "warning"
               },
               "properties": {
-                "tags": [
-                  "correctness",
-                  "security",
-                  "external/cwe/cwe-020"
-                ],
+                "tags": ["correctness", "security", "external/cwe/cwe-020"],
                 "description": "Matching a URL or hostname against a regular expression that contains an unescaped dot as part of the hostname might match more hostnames than expected.",
                 "id": "js/incomplete-hostname-regexp",
                 "kind": "problem",
@@ -1503,11 +1446,7 @@
                 "level": "warning"
               },
               "properties": {
-                "tags": [
-                  "security",
-                  "correctness",
-                  "external/cwe/cwe-020"
-                ],
+                "tags": ["security", "correctness", "external/cwe/cwe-020"],
                 "description": "Checking for the \"javascript:\" URL scheme without also checking for \"vbscript:\"\n              and \"data:\" suggests a logic error or even a security vulnerability.",
                 "id": "js/incomplete-url-scheme-check",
                 "kind": "problem",
@@ -1531,11 +1470,7 @@
                 "level": "warning"
               },
               "properties": {
-                "tags": [
-                  "correctness",
-                  "security",
-                  "external/cwe/cwe-020"
-                ],
+                "tags": ["correctness", "security", "external/cwe/cwe-020"],
                 "description": "Security checks on the substrings of an unparsed URL are often vulnerable to bypassing.",
                 "id": "js/incomplete-url-substring-sanitization",
                 "kind": "problem",
@@ -1788,10 +1723,7 @@
                 "level": "error"
               },
               "properties": {
-                "tags": [
-                  "security",
-                  "external/cwe/cwe-640"
-                ],
+                "tags": ["security", "external/cwe/cwe-640"],
                 "description": "Using the HTTP Host header to construct a link in an email can facilitate phishing\n              attacks and leak password reset tokens.",
                 "id": "js/host-header-forgery-in-email-generation",
                 "kind": "path-problem",
@@ -1815,10 +1747,7 @@
                 "level": "warning"
               },
               "properties": {
-                "tags": [
-                  "security",
-                  "external/cwe/cwe-598"
-                ],
+                "tags": ["security", "external/cwe/cwe-598"],
                 "description": "Placing sensitive data in a GET request increases the risk of\n              the data being exposed to an attacker.",
                 "id": "js/sensitive-get-query",
                 "kind": "problem",
@@ -1871,10 +1800,7 @@
                 "level": "warning"
               },
               "properties": {
-                "tags": [
-                  "security",
-                  "external/cwe/cwe-601"
-                ],
+                "tags": ["security", "external/cwe/cwe-601"],
                 "description": "Server-side URL redirection based on unvalidated user input\n              may cause redirection to malicious web sites.",
                 "id": "js/server-side-unvalidated-url-redirection",
                 "kind": "path-problem",
@@ -2072,11 +1998,7 @@
                 "level": "warning"
               },
               "properties": {
-                "tags": [
-                  "correctness",
-                  "security",
-                  "external/cwe/cwe-116"
-                ],
+                "tags": ["correctness", "security", "external/cwe/cwe-116"],
                 "description": "Replacing a substring with itself has no effect and may indicate a mistake.",
                 "id": "js/identity-replacement",
                 "kind": "problem",
@@ -2186,10 +2108,7 @@
                 "enabled": true
               },
               "properties": {
-                "tags": [
-                  "summary",
-                  "lines-of-code"
-                ],
+                "tags": ["summary", "lines-of-code"],
                 "description": "The total number of lines of JavaScript and TypeScript code from the source code directory,\n   excluding auto-generated files and files in `node_modules`. This query counts the lines of code, excluding\n   whitespace or comments.",
                 "id": "js/summary/lines-of-user-code",
                 "kind": "metric",
@@ -2209,9 +2128,7 @@
                 "enabled": true
               },
               "properties": {
-                "tags": [
-                  "summary"
-                ],
+                "tags": ["summary"],
                 "description": "The total number of lines of JavaScript or TypeScript code across all files checked into the repository, except in `node_modules`. This is a useful metric of the size of a database. For all files that were seen during extraction, this query counts the lines of code, excluding whitespace or comments.",
                 "id": "js/summary/lines-of-code",
                 "kind": "metric",
@@ -24651,12 +24568,7 @@
           }
         }
       ],
-      "newlineSequences": [
-        "\r\n",
-        "\n",
-        " ",
-        " "
-      ],
+      "newlineSequences": ["\r\n", "\n", " ", " "],
       "columnKind": "utf16CodeUnits",
       "properties": {
         "metricResults": [
