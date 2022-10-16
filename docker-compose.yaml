@@ -1,0 +1,12 @@
+version: '3.5'
+
+services:
+   db:
+      image: postgres:12
+      restart: always
+      environment:
+         POSTGRES_USER: issuesuser
+         POSTGRES_PASSWORD: 5947c1d13fb421f4137b7af2396aed20
+         POSTGRES_DB: issues
+      ports:
+         - 5432:5432

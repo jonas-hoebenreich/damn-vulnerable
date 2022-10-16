@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <title>Issues</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="/css/main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="/js/main.js"></script>
+    <div th:replace="fragments/header :: header">...</div>
+</head>
+<body>
+<h1>Profile</h1>
+<form id="asd" th:action="@{/profile/update}" th:object="${profile}" method="post">
+<b>Name: <input type="text" th:field="*{name}" th:value="${profile.name}"/></b><br>
+<b>Username:  <input type="text" th:field="*{username}" th:value="${profile.username}"/></b><br>
+<b>Email:  <input type="text" th:field="*{email}" th:value="${profile.email}"/></b><br>
+<b>Old password:  <input type="text" th:field="*{oldPassword}" /></b><br>
+<b>New password:  <input type="text" th:field="*{newPassword}" /></b><br>
+    <input type="hidden" th:field="*{id}" th:value="${profile.id}">
+    <input id="Button" type="button" value="Submit" onclick="sendPostReload('/profile/update', document.getElementById('asd'))" />
+</form>
+
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+  <title>Issues</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <link rel="stylesheet" href="/css/main.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="/js/main.js"></script>
+  <div th:replace="fragments/header :: header">...</div>
+</head>
+<body>
+<h1>Logs</h1>
+<form  action="#" th:action="@{/api/logs/settings}" id="formLocation" method="post">
+  <p>Set Log location: <input type="text" name="path"  th:value="${settings}" /></p>
+  <p><input  type="button" value="Submit" onclick="sendPostReload('/api/logs/settings', document.getElementById('formLocation'))" /> <input type="reset" value="Reset" /></p>
+</form>
+<form  action="#" th:action="@{/api/logs/write}" id="formMsg" method="post">
+  <p>Write Log message: <input type="text" name="msg" /></p>
+  <p><input  type="button" value="Submit" onclick="sendPostReload('/api/logs/write', document.getElementById('formMsg'))" /> <input type="reset" value="Reset" /></p>
+</form>
+<p>[(${logs})]</p>
+
+
+
+
+</body>
+</html>

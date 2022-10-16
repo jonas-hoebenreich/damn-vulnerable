@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security"
+      layout:decorator="layout">
+
+<head>
+  <title>Issues</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <link rel="stylesheet" href="/css/main.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="/js/main.js"></script>
+  <div th:replace="fragments/header :: header">...</div>
+</head>
+<body>
+<div>Encountered an error at: [(${url})] please contact an Admin</div>
+<div th:if="${params}">
+  <div>Params: [(${params})]</div>
+</div>
+
+
+</body>
+</html>

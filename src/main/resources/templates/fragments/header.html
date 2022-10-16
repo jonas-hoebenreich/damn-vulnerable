@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security"
+      layout:decorator="layout">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+
+        <div class="nav" th:fragment="header">
+            <ul class="nav navbar-nav">
+                <li th:classappend="${module == 'home' ? 'active' : ''}">
+                    <a href="#" th:href="@{/}">Home</a>
+                </li>
+                <li th:classappend="${module == 'tasks' ? 'active' : ''}">
+                    <a href="#" th:href="@{/projects}">Projects</a>
+                </li>
+                <li th:classappend="${module == 'tasks' ? 'active' : ''}">
+                    <a href="#" th:href="@{/projects/new}">New Project</a>
+                </li>
+
+                <lir th:if="${#authorization.expression('!isAuthenticated()')}">
+                    <a href="/signin" th:href="@{/login}">
+                        <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span>&nbsp;Sign in
+                    </a>
+                </lir>
+                <lir sec:authorize="hasAuthority('ADMIN')">
+                    <a href="/profile" th:href="@{/secure/admin/users}" onclick="$('#form').submit();">Users</a>
+                </lir>
+                <lir sec:authorize="hasAuthority('ADMIN')">
+                    <a href="/profile" th:href="@{/secure/admin/logs}" onclick="$('#form').submit();">Logs</a>
+                </lir>
+                <lir th:if="${#authorization.expression('isAuthenticated()')}">
+                    <a href="/profile" th:href="@{/profile}" >Profile</a>
+                </lir>
+                <lir th:if="${#authorization.expression('isAuthenticated()')}">
+                    <a  th:href="@{/logout}" onclick="$('#form').submit();">
+                        <span class="glyphicon glyphicon-log-out" aria-hidden="true"></span>&nbsp;Logout
+                    </a>
+                    <form style="visibility: hidden" id="form" method="post" action="#" th:action="@{/logout}"></form>
+                </lir>
+            </ul>
+        </div>
+</body>
+</html>

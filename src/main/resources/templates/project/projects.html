@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorator="layout">
+
+<head>
+    <title>Issues</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="/css/main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="/js/main.js"></script>
+    <div th:replace="fragments/header :: header">...</div>
+</head>
+<body>
+<div layout:fragment="content">
+    <table class="table table-striped table-hover">
+        <thead>
+        <tr>
+            <th>Project</th>
+            <th>Description</th>
+            <th>Manager</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        <tr th:each="project : ${projects}">
+            <td> <a th:href="@{|/projects/${project.id}|}" th:text="${project.projectName}"></a></td>
+            <td th:text="${project.description}"></td>
+            <td th:text="${project.user.username}"></td>
+        </tr>
+        </tbody>
+    </table>
+
+
+
+</div>
+</body>
+</html>

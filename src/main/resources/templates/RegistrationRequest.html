@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <title>Issues</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="/css/main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="/js/main.js"></script>
+    <div th:replace="fragments/header :: header">...</div>
+</head>
+<body>
+<p th:if="${error != null}" th:text="${error}"></p>
+<h1>Registration</h1>
+<form action="#" th:action="@{/register}" th:object="${user}" method="post">
+    <p>username: <input type="text" th:field="*{username}" /></p>
+    <p>password: <input type="text" th:field="*{password}" /></p>
+    <p>name: <input type="text" th:field="*{name}" /></p>
+    <p>email: <input type="text" th:field="*{email}" /></p>
+    <p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>
+</form>
+</body>
+</html>

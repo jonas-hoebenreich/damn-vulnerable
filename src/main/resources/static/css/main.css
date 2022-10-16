@@ -1,0 +1,74 @@
+body {
+}
+
+h6 {
+    display: block;
+    font-size: .65em;
+}
+
+.tg {
+    border-collapse: collapse;
+    border-spacing: 0;
+    border-color: #ccc;
+    /*margin: 50px;*/
+}
+
+.tg td {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    padding: 10px 5px;
+    border-style: solid;
+    border-width: 1px;
+    overflow: hidden;
+    word-break: normal;
+    border-color: #ccc;
+    color: #333;
+    background-color: #fff;
+}
+
+.tg th {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 10px 5px;
+    border-style: solid;
+    border-width: 1px;
+    overflow: hidden;
+    word-break: normal;
+    border-color: #ccc;
+    color: #333;
+    background-color: #f0f0f0;
+    text-align: center;
+}
+
+.tg .tg-4eph {
+    background-color: #f9f9f9
+}
+
+ul.nav {
+    margin:0;
+    padding:0;
+    list-style:none;
+    height:36px; line-height:36px;
+    background:#0d7963; /* you can change the backgorund color here. */
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:13px;
+}
+ul.nav li {
+    border-right:1px solid #189b80; /* you can change the border color matching to your background color */
+    float:left;
+}
+ul.nav lir {
+    border-right:1px solid #189b80; /* you can change the border color matching to your background color */
+    float:right;
+}
+ul.nav a {
+    display:block;
+    padding:0 28px;
+    color:#ccece6;
+    text-decoration:none;
+}
+ul.nav a:hover,
+ul.nav li.current a {
+    background:#086754;
+}

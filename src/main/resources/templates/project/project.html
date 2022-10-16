@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <title>Issues</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="/css/main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="/js/main.js"></script>
+    <div th:replace="fragments/header :: header">...</div>
+</head>
+<body>
+<h1><a th:text="${project.projectName} + ' Overview'" > </a></h1>
+<p  th:text="${project.description}" />
+<h3>Attachments</h3>
+<ul th:each="attachment: ${attachments}">
+    <li><a th:href="${attachment.url}" th:text="${attachment.filename} + '  ' + ${attachment.contentType}"></a></li>
+</ul>
+<iframe name="dummyframe" id="dummyframe" style="display: none;"></iframe>
+<div>
+    <form method="POST" target="dummyframe" onsubmit="if (checkMime('file')){setTimeout(function(){window.location = window.location.href;},1000);return true}"  enctype="multipart/form-data" action="#" th:action="@{/api/attachment/}" id="formAtt">
+        <table>
+            <tr><td>File to upload:</td><td><input type="hidden" name="projectId" th:value="${project.id}" />
+                <input type="file" id="file" name="file" accept="image/*"/></td></tr>
+
+
+            <tr><td></td><td><input type="submit" value="Upload"  /></td></tr>
+
+        </table>
+    </form>
+</div>
+
+<h3>
+    Issues
+</h3>
+<ul th:each="issue: ${project.issues}">
+    <a th:href="${issue.getUrl}"><li  th:text="${issue.isResolved ? issue.title + ' - resolved' : issue.title}"></li>
+    </a>
+</ul>
+<h3>
+    <a th:href="@{/projects/__${project.id}__}  + '/newIssue'" >Create an Issue</a>
+</h3>
+
+</body>
+</html>

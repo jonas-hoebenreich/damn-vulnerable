@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <title th:text="${'Issue:' + issue.title + ' ' + project.id}"></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="/css/main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="/js/main.js"></script>
+    <div th:replace="fragments/header :: header">...</div>
+</head>
+<body>
+
+<h1 th:text="${'Issue:' + issue.title + ' - ' + project.id}"></h1>
+<p th:object="${issue}" th:text="${issue.text}" />
+
+
+<h1>Comments</h1>
+<ul th:each="comment: ${comments}">
+    <li th:text="${comment.text}"></li>
+    <a th:text="'by ' + ${comment.username} + ' ' + ${comment.getReadableDate()}">
+</ul>
+
+<form  onsubmit="sendPostReload('/api/comment/new', document.getElementById('commentForm'))" id="commentForm" action="#" th:action="@{/api/comment/new}" th:object="${newComment}"  method="post">
+    <p>Comment: <input type="text" th:field="*{text}" /></p>
+    <input type="hidden" th:field="*{issueId}" value="*{issueId}" />
+    <p><input id="Button" type="button" value="Submit" onclick="sendPostReload('/api/comment/new', document.getElementById('commentForm'))"  /> <input type="reset" value="Reset" /></p>
+</form>
+
+</body>
+</html>
